@@ -1,18 +1,27 @@
- // ## Array Cardio Day 2
+const functions = require('./07');
 
- const people = [
-    { name: 'Wes', year: 1988 },
-    { name: 'Kait', year: 1986 },
-    { name: 'Irv', year: 1970 },
-    { name: 'Lux', year: 2015 }
-  ];
+describe('People Array',()=>{
+  it('has at least one person 19 or older',()=>{
+    expect(functions.isAdult).toBe(true);
+  });
+  it('does not have everyone 19 or older',()=>{
+    expect(functions.allAdult).toBe(false);
+  });
+});
 
-  const comments = [
-    { text: 'Love this!', id: 523423 },
-    { text: 'Super good', id: 823423 },
-    { text: 'You are the best', id: 2039842 },
-    { text: 'Ramen is my fav food ever', id: 123523 },
-    { text: 'Nice Nice Nice!', id: 542328 }
-  ];
+describe('Comments Array',()=>{
+  it('has a comment with the ID of 823423 that reads "Super good"',()=>{
+    expect(functions.comment.text).toBe("Super good");
+  });
+  it('has a comment with the ID of 823423 which is index 1',()=>{
+    expect(functions.index).toBe(1);
+  });
+})
+
+describe('newComments Array',()=>{
+  it('does not contain comment with ID of 823423',()=>{
+    expect(functions.newComments.includes(comment => comment.id === 823423)).toBe(false);
+  });
+})
 
   
