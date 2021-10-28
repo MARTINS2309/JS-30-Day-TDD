@@ -1,4 +1,4 @@
-const functions = require('./07');
+const functions = require('./07.mjs');
 
 describe('People Array',()=>{
   it('has at least one person 19 or older',()=>{
